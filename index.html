@@ -31,6 +31,9 @@
             </ul>
         </div>
     </nav>
+    <div class="container-fluid">
+        <!--ujihjhjhkhg.gjhkdgfjetydfcfdhrdgvjy6tggrtrcbffjtrh,jfhb00-->
+    </div>
     <!--slide show container-->
     <div class="slideshow-container">
         <div class ="mySlides fade">
@@ -61,11 +64,24 @@
     </div>
     <!--<div class="container fluid">
         <div class=""
-    </div>-->
+    </div>-->\
+    <!--STORY-->
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div class="p-2 bd-highlight" id="flex">
+                <p>llentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper </p>
+            </div>
+            <div class="p-2 bd-highlight" id="flex">
+                <img src="images/story.jpg">
+            
+            </div>
+        </div>
+    </div>
+    
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xm-12">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
                 <div class="card" style="width:350px; height:550px;">
                     <img class="card-img-top" src="images/icon.jpg">
                     <div class="card-body">
@@ -74,10 +90,9 @@
                         <a href="#" class="btn btn-primary">Learn more</a>
                     </div>
                 </div>
-               
             </div>
        
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xm-12">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
                 <div class="card" style="width:350px; height: 550px;">
                     <img class="card-img-top"src="images/icon.jpg">
                     <div class="card-body">
@@ -88,7 +103,7 @@
                 </div>       
             </div>
            
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xm-12">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
                 <div class="card" style="width:350px; height: 550px;">
                     <img  class="card-img-top" src="images/icon.jpg">
                     <div class="card-body">
@@ -98,27 +113,37 @@
                     </div>
                 </div>
                 </div>
-        </div>
-    
-    </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="card" style="width:350px; height: 550px;">
+                        <img class="card-img-top"src="images/icon.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title">Digital solutions</h4>
+                            <p class="card-text">fhduifvncbzvkfghlasdfhgvdvnnsfjhgaslfbnvblsfjhzfk</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+        </div>   
+        
 
     <!--FOOTER-->
     <div class="footer">
         <div class="d-flex justify-content-between">
-            <div class="p-2 bd-highlight">
-                <form>
+            <div class="p-2 bd-highlight" id="flex">
+                <form action="db_connection.php" method="post" id="form_id" class="form_class">
                     <div class="form-group">
-                        <label for="exampleInputEmail">Email Address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                        <label for="userEmail">Email Address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                         <div class="form-group">
                             <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="pwd">
+                            <input type="password" class="form-control" id="userPassword" name="password">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                </form>    
+                </form>  
             </div>
-            <div class="p-2 bd-highlight">
+            <div class="p-2 bd-highlight" id="flex">
                 <h7>FOLLOW US ON:</h7>
                 <ul>
                     <li><a href="#"><i class="fab fa-facebook"></i></a></li>
@@ -130,31 +155,21 @@
                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                 </ul>
             </div>
-            <div class="p-2 bd-highlight">
+            <div class="p-2 bd-highlight" id="flex">
                 <UL>
-                    <li><a href="#">HOME</a></li>
+                    <li ><a href="#" class="flinks">HOME</a color></li>
                 </UL>
                 <UL>
-                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#" class="flinks">ABOUT</a></li>
                 </UL>
                 <UL>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#" class="flinks">CONTACT</a></li>
                 </UL>
 
             </div>
 
         </div>
     </div>
-
-
-
-    
-
-
-
-
-
-
     <script src="js/fontojs/all.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>

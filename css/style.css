@@ -104,9 +104,20 @@ body{
     animation-duration: 1.5s;
   }
 
-/*FOOTER*/ul{
+/*FOOTER*/
+.footer{
+  background-color: rgb(97, 92, 92);
+}
+ul{
   list-style-type:none;
 }
+.flinks{
+  color:black;
+}
+.flex{
+  padding: 40px;
+}
+
 
 
 
