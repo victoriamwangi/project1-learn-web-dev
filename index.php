@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include "db_connection.php"; ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,11 +32,35 @@
             </ul>
         </div>
     </nav>
-    <div class="container-fluid">
-        <!--ujihjhjhkhg.gjhkdgfjetydfcfdhrdgvjy6tggrtrcbffjtrh,jfhb00-->
-    </div>
+    
     <!--slide show container-->
-    <div class="slideshow-container">
+    <div id="myCarousel" class="carousel slide z-depth-1-half" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel_inner">
+        <div class="item active">
+        <img src="images/slide1.jpg" alt="Prayer" class="d-block w-100">
+        </div>
+        <div class="item">
+        <img src="images/slide2.jpg" alt="Believe" class="d-block w-100">
+        </div>
+        <div class="item">
+        <img src="images/slide3.jpg" alt="Praise" class="d-block w-100">
+        </div>
+    </div>
+    <a class="right carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </div>
+    <!-- <div class="slideshow-container">
         <div class ="mySlides fade">
             <div class="numbertext">1/3</div>
             <img src="images/slide1.jpg" style="width:100% ;height: auto;">
@@ -51,17 +76,18 @@
             <img src="images/slide3.jpg" style="width:100% ;height: auto;">
             <div class="text">CREATE</div>
         </div>
-    <!--next and previous button-->
+    
+       next and previous button
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-    <!--the dots/circl=e-->
-    <div style="text-align:center">
+    </div>-->
+    <!-- <br> -->/
+    <!-- the dots/circl=e -->
+    <!--<div style="text-align:center">
         <span class="dot" onclick="currentSlides(1)"></span>
         <span class="dot" onclick="currentSlides(2)"></span>
         <span class="dot" onclick="currentSlides(3)"></span>
-    </div>
+    </div> -->
     <!--<div class="container fluid">
         <div class=""
     </div>-->\
@@ -105,7 +131,7 @@
            
             <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
                 <div class="card" style="width:350px; height: 550px;">
-                    <img  class="card-img-top" src="images/icon.jpg">
+                    <img  class="card-img-top" src="images/pray.jpg">
                     <div class="card-body">
                         <h4 class="card-title">graphics design</h4>
                         <p class="card-text">ufhvjdvzhfvuzhjcvhfjhgsdfighs;fhjvmcvbnxkfztfyghbk;hhkh</p>
@@ -128,10 +154,11 @@
         
 
     <!--FOOTER-->
+   
     <div class="footer">
         <div class="d-flex justify-content-between">
             <div class="p-2 bd-highlight" id="flex">
-                <form action="db_connection.php" method="post" id="form_id" class="form_class">
+                <form action="login.php" method="post" id="form_id" class="form_class">
                     <div class="form-group">
                         <label for="userEmail">Email Address</label>
                         <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email">

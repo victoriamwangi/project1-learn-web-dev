@@ -18,6 +18,19 @@
 //      $conn -> close();
 //  }
 
-$db= mysqli_connect("localhost", "root", "4798@vnm", "pg1") or die("Error connecting to database");
+$servername = "localhost";
+$username = "root"; // For MYSQL the predifined username is root
+$password = "4798@vnm"; // For MYSQL the predifined password is " "(blank)
 
- ?>
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+ 
+// Check connection
+
+ if ($conn->connect_error) {
+
+    die("Connection failed: " . $conn->connect_error);
+}
+
+echo "Connected successfully";
