@@ -1,26 +1,32 @@
 <?php 
-include("db_connection.php");
-session_start();
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-    $myemail= mysqli_real_escape_string($db, $_POST["email"]);
-    $mypassword= mysqli_real_escape_string($db, $_POST["password"]);
+include("db_connection.php");?>
+<!DOCTTYPE html>
+<html>
+<head>
+<title>Registration system PHP and MySQL</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="header">
+<h2>Login</h2>
+</div>
+ <form method="post" action="login.php">
+ <?php include('errors.php'); ?>
+ <div class="form-group">
+     <label>Username</label>
+     <input type="text" name="username">
+ </div>
+ <div class="form-group">
+     <label>Password</label>
+     <input type="password" name="password">
+ </div>
+ <div class="input-type">
+      <button type="submit" class="btn" name="login.user">Login</button> 
+ </div>
+    <p>
+    Don't have an account? <a href="register.php">Sign up</a>
+    </p>
 
-    $sql="SELECT id FROM admin WHERE email = '$myemail' and passcode='$mypassword'";
-    $result= mysqli_query($db, $sql);
-    //mysqli_result::fetch_array ( int $resulttype = MYSQLI_BOTH ) 
-    $row = msqli_fetch_array($result,MYSQLI_ASSOC);
-    $active=$row["active"];
-
-    $count= mysqli_num_row($result);
-
-    if  ($count == 1){
-        session_register(myemail);
-        $_SESSION['login_user']= $myemail;
-        
-        header("location:welcome.php");
-    }else{
-        $error="Your Email or Password is incorrect";
-    }
-    
-}
-?>
+ </form>
+</body>
+</html>

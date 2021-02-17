@@ -1,39 +1,22 @@
-/*let slideIndex = 0;
-showSlides();
+$(document).ready(function(){
+        $("#myCarousel").carousel();
+});
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+let passField = document.getElementById("password");
+emailField.onfocus = function(){
+  if(passField.value == "your password"){
+    passField.value= "";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+};
+passField.onblur = function(){
+  if (passField.value == ""){
+    passField.value = "your password";
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+};
+
+function simpleMessage(){
+  alert("Get Directions to the Chaple");
 }
-
-//email and password submission and validation
-function validation(){
-    let email= document.getElementById("userEmail").value;
-    let password= document.getElementById("userPassword").value;
-    if(name ===" "|| email===" "){
-        alert("Please fills all fields!!");
-        return false;
-    }
-    else if(!(email).match(emailReg)){
-        alert("Invalid Email!!")
-        return false;
-    }else{
-        return true;
-    }
-
-}*/
-
+ setTimeout(simpleMessage, 1000);
  
 
