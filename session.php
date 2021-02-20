@@ -1,14 +1,46 @@
-<?php
-/*include("db_connection.php");
+<?php 
 session_start();
 
-$user_check= $_SESSION["login_user"];
-$ses_sql= mysqli_fetch_array($db, "select username from admin where username= '$user_check'");
-$row= mysqli_fetch_array($ses_sql, MYSQLI_ASSOC);
-$login_session=$row["username"];
+if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
 
-if(!isset($_SESSION["login_user"])){
-    header("location:login.php");
-    die();
 }
-?>*/
+if (isset($_GET['logout'])){
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
+}
+?>
+
+<!<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div class="header">
+       <h2>Home Page</h2>
+   </div>
+   <div class="content">
+   <!--notification message-->
+   <?php if (isset($_SESSION['success'])):?>
+   <div class="error success">
+       <h3>
+          <?php 
+          echo $_SESSION['success'];
+          unset($_SESSION['success']);
+          ?>
+       </h3>
+   </div>
+   <?php endif ?>
+   
+   <!--logged in usser information-->
+   <?php if (isset($_SESSION['username'])) : ?>
+   <p>Welcome<strong><?php echo $_SESSION['username']; ?></strong></p>
+   <p><a href="index.php?Logout='1'" style="color:red;">logout</a></p>
+   <?php endif ?>
+   </div>
+</body>
+</html>
